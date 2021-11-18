@@ -67,11 +67,11 @@ class UsersController < ApplicationController
         id_array.push(element.user_id)
       }
       rnd = rand(array_count)
-      user_name = @user[rnd].name
-      render json: {result: user_name}
+      message = @user[rnd].name
     else
-      render json: {result: 'Data is Empty'}
+      message = "Data is Empty"
     end
+    render json: {result: message}
   end
 
   private
