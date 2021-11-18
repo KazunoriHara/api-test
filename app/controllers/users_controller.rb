@@ -69,6 +69,8 @@ class UsersController < ApplicationController
       rnd = rand(array_count)
       user_name = @user[rnd].name
       render json: {result: user_name}
+    else
+      render json: {result: 'Data is Empty'}
     end
   end
 
