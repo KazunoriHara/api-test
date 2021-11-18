@@ -68,10 +68,8 @@ class UsersController < ApplicationController
       }
       rnd = rand(array_count)
       message = @user[rnd].name
-    else
-      message = "Data is Empty"
+      render json: {result: message}
     end
-    render json: {result: message}
   end
 
   private
